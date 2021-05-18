@@ -65,6 +65,10 @@ module.exports = (env, argv) => {
       new LicenseWebpackPlugin(),
     ],
 
+    externals: {
+      '@editorjs/paragraph': '@editorjs/paragraph',
+    },
+
     module: {
       rules: [
         {
@@ -78,6 +82,9 @@ module.exports = (env, argv) => {
             },
             {
               loader: 'ts-loader',
+              options: {
+                onlyCompileBundledFiles: true,
+              }
             },
           ],
         },

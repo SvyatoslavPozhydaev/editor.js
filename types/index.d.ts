@@ -73,6 +73,8 @@ export {
 export {OutputData, OutputBlockData} from './data-formats/output-data';
 export { BlockAPI } from './api'
 
+export { default as SelectionUtils  } from './selection';
+
 /**
  * We have a namespace API {@link ./api/index.d.ts} (APIMethods) but we can not use it as interface
  * So we should create new interface for exporting API type

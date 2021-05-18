@@ -2,7 +2,7 @@
   "name": "@editorjs/editorjs",
   "version": "2.21.0",
   "description": "Editor.js — Native JS, based on API and Open Source",
-  "main": "dist/editor.js",
+  "main": "./dist/editor.js",
   "types": "./types/index.d.ts",
   "keywords": [
     "codex editor",
@@ -79,7 +79,8 @@
     "tslint": "^6.1.1",
     "typescript": "3.8.3",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "@editorjs/paragraph": "^2.8.0"
   },
   "collective": {
     "type": "opencollective",
@@ -89,5 +90,8 @@
     "codex-notifier": "^1.1.2",
     "codex-tooltip": "^1.0.2",
     "nanoid": "^3.1.22"
+  },
+  "peerDependencies": {
+    "@editorjs/paragraph": "^2.8.0"
   }
 }

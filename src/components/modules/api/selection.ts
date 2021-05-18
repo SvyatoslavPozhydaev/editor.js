@@ -7,6 +7,13 @@ import Module from '../../__module';
  * Provides with methods working with SelectionUtils
  */
 export default class SelectionAPI extends Module {
+  public selection: SelectionUtils;
+
+  constructor(config) {
+    super(config);
+    this.selection = new SelectionUtils();
+  }
+
   /**
    * Available methods
    *
@@ -28,7 +35,7 @@ export default class SelectionAPI extends Module {
    * @returns {HTMLElement|null}
    */
   public findParentTag(tagName: string, className?: string): HTMLElement | null {
-    return new SelectionUtils().findParentTag(tagName, className);
+    return this.selection.findParentTag(tagName, className);
   }
 
   /**
@@ -37,6 +44,6 @@ export default class SelectionAPI extends Module {
    * @param {HTMLElement} node - tag that should contain selection
    */
   public expandToTag(node: HTMLElement): void {
-    new SelectionUtils().expandToTag(node);
+    this.selection.expandToTag(node);
   }
 }

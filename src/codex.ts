@@ -11,6 +11,8 @@ import 'components/polyfills';
 import Core from './components/core';
 import * as _ from './components/utils';
 
+export { default as SelectionUtils } from './components/selection';
+
 declare const VERSION: string;
 
 /**
