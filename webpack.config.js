@@ -106,7 +106,7 @@ module.exports = (env, argv) => {
       ],
     },
 
-    devtool: NODE_ENV === 'development' ? 'source-map' : false,
+    devtool: 'source-map',
 
     optimization: {
       minimizer: [
